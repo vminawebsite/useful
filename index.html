@@ -9,7 +9,7 @@
 
   <style>
     /* ---------------------------------------------------
-       Animations (Added so your shapes float and rotate)
+       Animations
        --------------------------------------------------- */
     @keyframes float {
       0%, 100% { transform: translateY(0); }
@@ -21,7 +21,7 @@
     }
 
     /* ---------------------------------------------------
-       Custom Tool Containers (To hold your Search & Grammar)
+       Custom Tool Containers
        --------------------------------------------------- */
     .tools-grid {
       display: flex;
@@ -54,40 +54,11 @@
     }
 
     /* ---------------------------------------------------
-       YOUR PROVIDED CSS (Exactly as you pasted it)
+       YOUR PROVIDED CSS
        --------------------------------------------------- */
     :root {
-      --dl-layout-size-large: 144px;
-      --dl-layout-size-small: 48px;
-      --dl-layout-space-unit: 16px;
-      --dl-layout-size-medium: 96px;
-      --dl-layout-size-xlarge: 192px;
-      --dl-layout-size-xsmall: 16px;
-      --dl-color-theme-accent1: #FFFFFF;
-      --dl-color-theme-accent2: #F5D1B0;
-      --dl-layout-radius-round: 50%;
-      --dl-layout-size-xxlarge: 288px;
-      --dl-color-theme-primary1: #BF4408;
-      --dl-color-theme-primary2: #E65103;
-      --dl-layout-size-maxwidth: 1400px;
-      --dl-layout-radius-radius2: 2px;
-      --dl-layout-radius-radius4: 4px;
-      --dl-layout-radius-radius8: 8px;
-      --dl-layout-space-halfunit: 8px;
-      --dl-layout-space-sixunits: 96px;
-      --dl-layout-space-twounits: 32px;
-      --dl-color-theme-secondary1: #FFFFFF;
-      --dl-color-theme-secondary2: #FBF1EB;
-      --dl-layout-space-fiveunits: 80px;
-      --dl-layout-space-fourunits: 64px;
-      --dl-layout-space-threeunits: 48px;
-      --dl-color-theme-neutral-dark: #191818;
-      --dl-layout-radius-cardradius: 8px;
-      --dl-color-theme-neutral-light: #FBFAF9;
-      --dl-layout-radius-imageradius: 8px;
       --dl-layout-radius-inputradius: 24px;
-      --dl-layout-radius-buttonradius: 24px;
-      --dl-layout-space-oneandhalfunits: 24px;
+      --dl-layout-radius-cardradius: 8px;
     }
 
     body {
@@ -127,7 +98,7 @@
       color: #ffffff;
       margin: 0 0 24px 0;
       font-size: 4.5rem;
-      font-family: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+      font-family: "'Inter', sans-serif";
       font-weight: 800;
       line-height: 1.1;
       text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -139,7 +110,7 @@
       margin: 0 0 40px 0;
       font-size: 1.25rem;
       max-width: 600px;
-      font-family: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+      font-family: "'Inter', sans-serif";
       line-height: 1.6;
       margin-left: auto;
       margin-right: auto;
@@ -199,7 +170,7 @@
       padding: 16px 40px;
       font-size: 1.1rem;
       transition: all 0.3s ease;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Inter', sans-serif;
       font-weight: 600;
       border-radius: 50px;
       text-decoration: none;
@@ -229,7 +200,7 @@
     }
 
     .thq-input {
-      color: var(--dl-color-theme-neutral-dark);
+      color: #191818;
       cursor: auto;
       outline: none;
       padding: 0.5rem 1.5rem;
@@ -237,7 +208,7 @@
       border-color: transparent;
       border-width: 0px;
       border-radius: var(--dl-layout-radius-inputradius);
-      background-color: var(--dl-color-theme-neutral-light);
+      background-color: #FBFAF9;
       font-family: 'Inter', sans-serif;
       font-size: 1rem;
       width: 100%;
@@ -248,19 +219,18 @@
     }
 
     .textarea {
-      color: var(--dl-color-theme-neutral-dark);
+      color: #191818;
       cursor: auto;
       padding: 1rem 1.5rem;
       border-color: transparent;
       border-width: 0px;
       border-radius: var(--dl-layout-radius-cardradius);
-      background-color: var(--dl-color-theme-neutral-light);
+      background-color: #FBFAF9;
       font-family: 'Inter', sans-serif;
       font-size: 1rem;
       width: 100%;
       resize: vertical;
       min-height: 100px;
-      margin-bottom: 15px;
       outline: none;
     }
     
@@ -268,37 +238,30 @@
       outline: 2px solid #764ba2;
     }
 
-    @media(max-width: 767px) {
-      .home-thq-hero-title-elm {
-        font-size: 2.5rem;
-        letter-spacing: -1px;
-      }
-      .home-thq-hero-description-elm {
-        font-size: 1.1rem;
-      }
-      .home-thq-geo-shape-elm1 {
-        width: 150px;
-        height: 150px;
-        border-width: 20px;
-      }
-      .home-thq-geo-shape-elm2 {
-        border-left: 60px solid transparent;
-        border-right: 60px solid transparent;
-        border-bottom: 100px solid rgba(255, 255, 255, 0.3);
-      }
-      .hero-btn {
-        padding: 14px 32px;
-        font-size: 1rem;
-      }
+    /* Custom styles for Network Results */
+    .network-results-box {
+      color: white; 
+      width: 100%; 
+      text-align: left; 
+      background: rgba(0,0,0,0.2); 
+      padding: 15px 20px; 
+      border-radius: 8px; 
+      display: none;
+      margin-bottom: 15px;
+      font-family: monospace;
+      font-size: 1.1rem;
     }
 
+    @media(max-width: 767px) {
+      .home-thq-hero-title-elm { font-size: 2.5rem; letter-spacing: -1px; }
+      .home-thq-hero-description-elm { font-size: 1.1rem; }
+      .home-thq-geo-shape-elm1 { width: 150px; height: 150px; border-width: 20px; }
+      .home-thq-geo-shape-elm2 { border-left: 60px solid transparent; border-right: 60px solid transparent; border-bottom: 100px solid rgba(255, 255, 255, 0.3); }
+      .hero-btn { padding: 14px 32px; font-size: 1rem; }
+    }
     @media(max-width: 479px) {
-      .home-thq-hero-title-elm {
-        font-size: 2rem;
-      }
-      .hero-btn {
-        width: 100%;
-      }
+      .home-thq-hero-title-elm { font-size: 2rem; }
+      .hero-btn { width: 100%; }
     }
   </style>
 </head>
@@ -316,7 +279,7 @@
       <div class="home-thq-hero-content-elm">
         <h1 class="home-thq-hero-title-elm">Useful Stuff</h1>
         <p class="home-thq-hero-description-elm">
-          Search the web safely and correct your grammar, all in one place.
+          Search the web safely, fix your grammar, and test your internet connection.
         </p>
 
         <div class="tools-grid">
@@ -331,9 +294,26 @@
 
           <div class="tool-box">
             <h2 class="tool-title">CorrectsX Grammar</h2>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 100%; gap: 15px;">
+              <textarea id="grammar-input" class="textarea" placeholder="Paste your text here to check your grammar..."></textarea>
+              
+              <button id="check-grammar-btn" class="hero-btn hero-btn-secondary" style="width: 100%;">Check Grammar</button>
+              
+              <textarea id="grammar-output" class="textarea" placeholder="Your corrected text will appear here..." readonly style="background: rgba(255,255,255,0.8); color: #333; cursor: not-allowed;"></textarea>
+            </div>
+          </div>
+
+          <div class="tool-box">
+            <h2 class="tool-title">Network Tester</h2>
             <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-              <textarea class="textarea" placeholder="Paste your text here to check your grammar..."></textarea>
-              <a href="#" class="hero-btn hero-btn-secondary" style="width: 100%;">Check Grammar</a>
+              
+              <div id="network-results" class="network-results-box">
+                <p style="margin-bottom: 8px;"><strong>IP Address:</strong> <span id="ip-result" style="color: #00f2fe;">...</span></p>
+                <p style="margin-bottom: 8px;"><strong>Est. Download:</strong> <span id="speed-result" style="color: #00f2fe;">...</span></p>
+                <p><strong>Status:</strong> <span id="network-status" style="color: #ff6b6b;">Waiting...</span></p>
+              </div>
+
+              <button id="run-network-btn" class="hero-btn hero-btn-primary" style="width: 100%;">Run Speed Test</button>
             </div>
           </div>
 
@@ -347,5 +327,83 @@
     </section>
   </div>
 
+  <script>
+    // --- 1. Grammar Tool Logic ---
+    document.getElementById('check-grammar-btn').addEventListener('click', function() {
+      const input = document.getElementById('grammar-input').value;
+      const output = document.getElementById('grammar-output');
+      
+      if (!input.trim()) {
+        output.value = "Please enter some text first!";
+        return;
+      }
+      
+      output.value = "Checking...";
+      
+      // *Note:* Because a real grammar AI requires a backend server, 
+      // this script provides a simulated "basic" correction for demonstration.
+      // It capitalizes the first letter and ensures there is punctuation at the end.
+      setTimeout(() => {
+        let correctedText = input.charAt(0).toUpperCase() + input.slice(1);
+        if (!/[.!?]$/.test(correctedText)) {
+          correctedText += '.';
+        }
+        output.value = correctedText + "\n\n(Note: To check complex grammar, connect this output box to a real AI API!)";
+      }, 800);
+    });
+
+    // --- 2. Network Tester Logic ---
+    document.getElementById('run-network-btn').addEventListener('click', async function() {
+      const resultsDiv = document.getElementById('network-results');
+      const ipSpan = document.getElementById('ip-result');
+      const speedSpan = document.getElementById('speed-result');
+      const statusSpan = document.getElementById('network-status');
+
+      // Show the results box and reset text
+      resultsDiv.style.display = 'block';
+      statusSpan.innerText = 'Fetching IP address...';
+      ipSpan.innerText = '...';
+      speedSpan.innerText = '...';
+
+      try {
+        // Step 1: Fetch IP Address using a free public API
+        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const ipData = await ipResponse.json();
+        ipSpan.innerText = ipData.ip;
+
+        // Step 2: Test Download Speed
+        statusSpan.innerText = 'Testing download speed...';
+        
+        const startTime = new Date().getTime();
+        const cacheBuster = '?nnn=' + startTime; 
+        // We download a dummy image (~3.1 MB) from Wikimedia to test speed
+        const downloadUrl = 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Pleiades_large.jpg' + cacheBuster; 
+        const downloadSizeBits = 3100000 * 8; // approx 3.1 MB converted to bits
+
+        const img = new Image();
+        
+        img.onload = function() {
+          const endTime = new Date().getTime();
+          const durationInSeconds = (endTime - startTime) / 1000;
+          const speedBps = downloadSizeBits / durationInSeconds;
+          const speedMbps = (speedBps / 1024 / 1024).toFixed(2); // Convert to Megabits per second
+          
+          speedSpan.innerText = speedMbps + ' Mbps';
+          statusSpan.innerText = 'Test Complete! ✅';
+          statusSpan.style.color = '#4facfe';
+        };
+        
+        img.onerror = function() {
+          speedSpan.innerText = 'Error';
+          statusSpan.innerText = 'Failed to download test file.';
+        };
+        
+        img.src = downloadUrl; // Start the download
+
+      } catch (err) {
+        statusSpan.innerText = 'Network error occurred.';
+      }
+    });
+  </script>
 </body>
 </html>
